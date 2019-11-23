@@ -32,7 +32,28 @@ class App extends Component {
 
         totalPrice: 0
     };
+    addFood = dish => {
+        const food = [...this.state.foods];
+        const foodsNames = this.state.foods.findIndex(i => i.name === dish.name);
+        food[foodsNames].count++;
+        let totalPrice = this.state.totalPrice;
+        totalPrice += dish.price;
+        this.setState({food, totalPrice});
 
+    };
+
+
+
+    removeFood = dish => {
+        const food = [...this.state.foods];
+        const foodsNames = this.state.foods.findIndex(i => i.name === dish.name);
+        food[foodsNames].count--;
+        let totalPrice = this.state.totalPrice;
+
+        totalPrice -= dish.price;
+        this.setState({food, totalPrice});
+
+    };
   render() {
 
     return (
