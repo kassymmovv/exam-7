@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Render from './Components/Render/Render'
 import './App.css';
-
+import AddFood from "./Components/AddFood/AddFood";
 import Shaverma from "./Images/Shaverma.jpg";
 import Sprite from "./Images/Sprite.jpg";
 import Hamburger from "./Images/Hamburger.jpg";
@@ -63,7 +63,12 @@ class App extends Component {
             />
             <div className="check">
                 <div>ORDER DETAILS</div>
-
+                <AddFood
+                    totalPrice={this.state.totalPrice}
+                    order={this.state.foods}
+                    orderPrice={bankOfFood}
+                    remove={this.removeFood}
+                />
                 <p>Сумма: {this.state.totalPrice}</p>
             </div>
         </div>
