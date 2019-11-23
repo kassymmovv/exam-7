@@ -20,3 +20,18 @@
 .App-link {
   color: #09d3ac;
 }
+.Dish{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 7px;
+  margin-top: 5px;
+}
+.button{
+  padding: 6px;
+  border-radius: 6px;
+  background: beige;
+}
